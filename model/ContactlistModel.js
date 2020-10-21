@@ -1,5 +1,4 @@
-<!-- 
-  
+
 /*
 ===========================================================================================================
                                 File:Passport.js
@@ -8,15 +7,11 @@
                                 Date:23 October 2020
 ===========================================================================================================
 */
- -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Resume</title>
-</head>
-<body>
-  <embed src="/static/img/portfolio/SaiKrishna_Resume-converted.pdf" style="width: 100%;" width="100%" height="2000px" />
-</body> 
-</html>
+const mongoose=require('mongoose')
+const ContactlistSchema= mongoose.Schema({
+    name:String,
+    number:String,
+    email:String
+})
+const ContactlistModel=mongoose.model('ContactlistModel',ContactlistSchema)
+module.exports=ContactlistModel
